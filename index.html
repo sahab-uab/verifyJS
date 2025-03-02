@@ -10,6 +10,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         height: 100vh;
         margin: 0;
         background-color: #684da6;
@@ -25,7 +26,7 @@
       .captchawraper {
         margin-bottom: 20px;
       }
-      .fild{
+      .fild {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -44,11 +45,18 @@
         <input type="text" id="captchaInput" required />
         <button type="button" onclick="captchaRefresh()">Refresh</button>
       </div>
-      <button  style="margin-top: 10px;" onclick="validate()">Submit</button>
-
-      <div style="position: absolute;">
-
-      </div>
+      <button style="margin-top: 10px" onclick="validate()">Submit</button>
+    </div>
+    <div style="display: flex; align-items: center; margin-top: 20px;">
+      <!-- GitHub Star Button for the Repository -->
+      <iframe
+        src="https://ghbtns.com/github-btn.html?user=sahab-uab&repo=verifyJS&type=star&count=true"
+        frameborder="0"
+        scrolling="0"
+        height="30"
+        width="100"
+        style="align-items: center;"
+      ></iframe>
     </div>
     <script src="verify.js"></script>
 
