@@ -26,6 +26,10 @@ Check out a live demo: [Your Website or GitHub Pages Link]
    ```html
    <script src="verify.js"></script>
    ```
+3. Or include the minified JavaScript file in your HTML:
+   ```html
+   <script src="verify.min.js"></script>
+   ```
 
 ## Usage
 
@@ -107,4 +111,3 @@ This project is licensed under the MIT License.
 ---
 
 ⭐ **Star this repo if you found it useful!** ⭐
-
