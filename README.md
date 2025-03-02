@@ -93,11 +93,11 @@ Modify these settings to customize your CAPTCHA:
 
 | Option              | Description                         | Default |
 | ------------------- | ----------------------------------- | ------- |
-| `totalDigit`        | Number of characters in the CAPTCHA | `4`     |
+| `totalDigit`        | Number of characters in the CAPTCHA | `6`     |
 | `number`            | Include numbers in CAPTCHA          | `true`  |
-| `uppercase`         | Include uppercase letters           | `false` |
-| `specialsCharacter` | Include special characters          | `false` |
-| `width`             | Width of CAPTCHA image              | `140`   |
+| `uppercase`         | Include uppercase letters           | `true` |
+| `specialsCharacter` | Include special characters          | `true` |
+| `width`             | Width of CAPTCHA image              | `200`   |
 | `height`            | Height of CAPTCHA image             | `50`    |
 
 ## Contributing
