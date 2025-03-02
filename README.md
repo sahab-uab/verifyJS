@@ -14,7 +14,7 @@
 
 ## Demo
 
-Check out a live demo: [Your site is live at https://sahab-uab.github.io/verifyJS/](https://sahab-uab.github.io/verifyJS/)
+Check out a live demo: [Click for demo](https://sahab-uab.github.io/verifyJS/)
 
 ## Installation
 
