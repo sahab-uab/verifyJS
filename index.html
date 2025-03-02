@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>verifyJS Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #684da6;
+      }
+      #captchaForm {
+        background: #ffffffcf;
+        padding: 20px;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        text-align: center;
+      }
+      .captchawraper {
+        margin-bottom: 20px;
+      }
+      .fild{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      #captchaImage {
+        border: 1px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="captchaForm">
+      <div class="captchawraper">
+        <img id="captcha" width="200" height="50" alt="CAPTCHA" />
+      </div>
+      <div class="fild">
+        <input type="text" id="captchaInput" required />
+        <button type="button" onclick="captchaRefresh()">Refresh</button>
+      </div>
+      <button  style="margin-top: 10px;" onclick="validate()">Submit</button>
+
+      <div style="position: absolute;">
+
+      </div>
+    </div>
+    <script src="verify.js"></script>
+
+    <script>
+      // configure
+      verifyJS({
+        totalDigit: 4,
+        number: true,
+        uppercase: false,
+        specialsCharacter: false,
+        width: 140,
+        height: 50,
+      }).vJSConfig();
+
+      // set image
+      window.onload = () => {
+        verifyJS().vJSImgSrc("#captcha");
+      };
+      function captchaRefresh() {
+        verifyJS().vJSImgRefreshSrc("#captcha");
+      }
+
+      // validation captua
+      function validate() {
+        const captucaFild = document.getElementById("captchaInput").value;
+        let status = verifyJS().vJSCheck(captucaFild);
+        if (status) {
+          alert("Your are pass");
+        } else {
+          alert("Sorry try again!");
+        }
+      }
+    </script>
+  </body>
+</html>
